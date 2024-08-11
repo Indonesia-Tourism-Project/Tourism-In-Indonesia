@@ -10,13 +10,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
-
 nav {
     display: flex;
     justify-content: center;
 }
-
-
 
 ul {
     display: flex;
@@ -106,7 +103,8 @@ a:hover {
     display: flex;
     align-items: center;
     background-color: #fff;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 20px 0;
     flex-direction: column;
 }
@@ -125,8 +123,10 @@ a:hover {
     margin-top: 50px;
 }
 
-.about p{
+.about p {
     font-size: large;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 .journey {
@@ -146,14 +146,14 @@ a:hover {
     font-size: 18px;
 }
 
-.slider-frame{
+.slider-frame {
     overflow: hidden;
-    height: 800px;
+    height: 400px;
     width: 1200px;
     margin-top: 20px;
 }
 
-@keyframes slide_animation{
+@keyframes slide_animation {
     0% {left:0px;}
     10% {left:0px;}
     20% {left:1200px;}
@@ -167,7 +167,7 @@ a:hover {
     100% {left:0px;}
 }
 
-@-webkit-keyframes slide_animation{
+@-webkit-keyframes slide_animation {
     0% {left:0px;}
     10% {left:0px;}
     20% {left:1200px;}
@@ -181,7 +181,7 @@ a:hover {
     100% {left:0px;}
 }
 
-.slide-images{
+.slide-images {
     width: 3600px;
     height: 800px;
     margin: 0 0 0 -2400px;
@@ -198,7 +198,7 @@ a:hover {
     animation-play-state: running;
 }
 
-.img-container{
+.img-container {
     height: 800px;
     width: 1200px;
     position: relative;
@@ -212,16 +212,259 @@ a:hover {
     opacity: 0;
     transform: translateY(100px);
     animation: fadeIn 1.5s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     0% {
-      opacity: 0;
-      transform: translateY(100px);
+        opacity: 0;
+        transform: translateY(100px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
+
+/* Facts & Figures Section */
+.facts {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 0;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.facts h2 {
+    background-color: #548BF5;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+}
+
+.facts-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.facts-list li {
+    margin-bottom: 10px;
+}
+
+.jumlah {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%; /* Ensure full width for alignment */
+    margin-bottom: 20px; /* Space below the jumlah section */
+}
+
+.jumlah-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+.jumlah-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #548BF5;
+    margin-bottom: -10px;
+}
+
+.jumlah-description {
+    font-size: 18px;
+}
+
+.facts-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.facts-content h2:first-of-type {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.facts-content h2 {
+    background-color: #548BF5;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Team Section */
+/* Team Section */
+.team {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 0;
+    flex-direction: column;
+}
+
+.team h2 {
+    background-color: #548BF5;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+}
+
+.team p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjust spacing between team members */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text inside each member */
+    max-width: 200px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px; /* Adjust width of images */
+    height: 100px; /* Adjust height of images */
+    object-fit: cover; /* Ensure image covers the area without stretching */
+}
+
+.team-member h3 {
+    font-size: 18px;
+    margin: 10px 0 2px; /* Adjust spacing */
+}
+
+.team-member p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.linkedin-link img {
+    width: 35px;
+    height: 100%;
+    margin-top: 0px; /* Jarak antara posisi dan ikon LinkedIn */
+}
+
+.linkedin-link img:hover {
+    opacity: 0.7; /* Efek hover untuk ikon LinkedIn */
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: #548BF5;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    flex-direction: column;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+ }
+
+ 
+@media (max-width: 440px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 20px;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    span {
+        position: relative;
+        font-size: 25px;
+        margin-right: 0px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    
+    span::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #548BF5;
+        -webkit-text-stroke: 0vw #383d52;
+        border-right: 2px solid #5af4f4;
+        overflow: hidden;
+        animation: animate 4s linear infinite;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        margin-top: 10%;
+    }
+
+    .home-text {
+        max-width: 50%;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .home img {
+        border-radius: 15px;
+        width: 100%;
+    }
+
+    .about img {
+        border-radius: 15px;
+        width: 30%;
+        margin-top: 50px;
+    }
+
+    .slider-frame {
+        overflow: hidden;
+        height: 300px;
+        width: 1200px;
+        margin-top: 20px;
+    }
+
+    .facts {
+        text-align: center;
+    }
+
+    .team {
+        text-align: center;
+    }
+
+    .team-members {
+        display: flex;
+        flex-direction: column;
+    }
+}
