@@ -139,7 +139,7 @@
     <script>
         const ctx1 = document.getElementById('PropertyTypeSales').getContext('2d');
         const PropertyTypeSales = new Chart(ctx1, {
-            type: 'bar', // atau jenis chart lain sesuai kebutuhan
+            type: 'bar',
             data: {
                 labels: ['Yogyakarta', 'Tanggerang', 'Surabaya', 'Subang', 'Sragen', 'Solo', 'Serang', 'Semarang', 'Purwakarta', 'Ponorogo'],
                 datasets: [{
@@ -183,7 +183,7 @@
                     tooltip: {
                         callbacks: {
                             title: function(tooltipItems) {
-                                return ''; // Mengosongkan title jika tidak diperlukan
+                                return '';
                             },
                             label: function(tooltipItem) {
                                 const dataPoint = tooltipItem.raw;
@@ -198,23 +198,19 @@
                         position: 'bottom',
                         title: {
                             display: true,
-                            text: 'Price (Ribu)' // Label untuk sumbu X
+                            text: 'Price (Ribu)'
                         }
                     },
                     y: {
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Rating' // Label untuk sumbu Y
+                            text: 'Rating'
                         }
                     }
                 }
             }
         });
-
-
-    
-        // Tambahkan script chart lainnya sesuai kebutuhan
     </script>
 </body>
 </html>
