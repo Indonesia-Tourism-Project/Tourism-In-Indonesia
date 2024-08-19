@@ -6,6 +6,7 @@
     <title>Tourism in Indonesia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="opening">
@@ -76,15 +77,19 @@
             <h2>Dataset</h2>
             <h2>Looker Studio</h2>
         </div>
-        <div class="lookerstudio-chart">
-            <iframe 
-                width="1000" 
-                height="600" 
-                src="https://lookerstudio.google.com/reporting/4dafa3a1-12e7-48e3-ae18-53cc42b9e3e6" 
-                frameborder="0" 
-                style="border:0" 
-                allowfullscreen>
-            </iframe>
+        <div class="table">
+            <div class="reports">
+                <div class="reports-card">
+                    <div class="report-chart">
+                        <canvas id="PropertyTypeSales" width="900" height="600" style="padding-bottom: 50px; padding-top: 50px;"></canvas>
+                    </div>
+                </div>
+                <div class="reports-card">
+                    <div class="report-chart">
+                        <canvas id="MostOrdersbyYearBuilt"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -96,15 +101,15 @@
                 <img src="Assets/team1.jpg">
                 <h3>Syaf Rafsanjani</h3>
                 <p>Project Leader</p>
-                <a href="https://www.linkedin.com/in/ifan-gustian" target="_blank" class="linkedin-link">
+                <a href="https://www.linkedin.com/in/" target="_blank" class="linkedin-link">
                     <img src="Assets/linkedin_.png" alt="LinkedIn">
                 </a>
             </div>
             <div class="team-member">
-                <img src="Assets/team2.jpg">
+                <img src="Assets/ifan.jpg">
                 <h3>Ifan Gustian</h3>
                 <p>Front End</p>
-                <a href="https://www.linkedin.com/in/syafrafsanjani" target="_blank" class="linkedin-link">
+                <a href="https://www.linkedin.com/in/ifan-gustian" target="_blank" class="linkedin-link">
                     <img src="Assets/linkedin_.png" alt="LinkedIn">
                 </a>
             </div>
@@ -112,7 +117,7 @@
                 <img src="Assets/team3.jpg">
                 <h3>Daffa Herdiansyah</h3>
                 <p>Data Analyst</p>
-                <a href="https://www.linkedin.com/in/syafrafsanjani" target="_blank" class="linkedin-link">
+                <a href="https://www.linkedin.com/in/" target="_blank" class="linkedin-link">
                     <img src="Assets/linkedin_.png" alt="LinkedIn">
                 </a>
             </div>
@@ -120,7 +125,7 @@
                 <img src="Assets/team3.jpg">
                 <h3>Yunan</h3>
                 <p>Quality Assurance</p>
-                <a href="https://www.linkedin.com/in/syafrafsanjani" target="_blank" class="linkedin-link">
+                <a href="https://www.linkedin.com/in/" target="_blank" class="linkedin-link">
                     <img src="Assets/linkedin_.png" alt="LinkedIn">
                 </a>
             </div>
@@ -130,5 +135,86 @@
     <section id="footer" class="footer">
         <p>Copyright 2024 Askara Teammates</p>
     </section>
+
+    <script>
+        const ctx1 = document.getElementById('PropertyTypeSales').getContext('2d');
+        const PropertyTypeSales = new Chart(ctx1, {
+            type: 'bar', // atau jenis chart lain sesuai kebutuhan
+            data: {
+                labels: ['Yogyakarta', 'Tanggerang', 'Surabaya', 'Subang', 'Sragen', 'Solo', 'Serang', 'Semarang', 'Purwakarta', 'Ponorogo'],
+                datasets: [{
+                    label: 'Age',
+                    data: [29, 28, 30, 27, 29, 24, 31, 30, 30, 27],
+                    backgroundColor: '#548BF5',
+                    borderColor: '#548BF5',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('MostOrdersbyYearBuilt').getContext('2d');
+        const MostOrdersbyYearBuilt = new Chart(ctx2, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        {x: 0, y: 4.44, label: 'Pusat Perbelanjaan'},
+                        {x: 5.8, y: 4.71, label: 'Tempat Ibadah'},
+                        {x: 15, y: 4.53, label: 'Budaya'},
+                        {x: 22, y: 4.4, label: 'Cagar Alam'},
+                        {x: 35, y: 4.41, label: 'Taman Hiburan'},
+                        {x: 37, y: 4.37, label: 'Bahari'}
+                    ],
+                    backgroundColor: '#548BF5',
+                    borderColor: '#548BF5',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                return ''; // Mengosongkan title jika tidak diperlukan
+                            },
+                            label: function(tooltipItem) {
+                                const dataPoint = tooltipItem.raw;
+                                return `Label: ${dataPoint.label}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Price (Ribu)' // Label untuk sumbu X
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Rating' // Label untuk sumbu Y
+                        }
+                    }
+                }
+            }
+        });
+
+
+    
+        // Tambahkan script chart lainnya sesuai kebutuhan
+    </script>
 </body>
 </html>
