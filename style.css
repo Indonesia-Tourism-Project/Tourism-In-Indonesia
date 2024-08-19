@@ -225,7 +225,6 @@ a:hover {
     }
 }
 
-/* Facts & Figures Section */
 .facts {
     display: flex;
     align-items: center;
@@ -259,14 +258,14 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 30px;
-    width: 100%; /* Ensure full width for alignment */
-    margin-bottom: 20px; /* Space below the jumlah section */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .jumlah-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align items horizontally */
+    align-items: center;
 }
 
 .jumlah-number {
@@ -329,28 +328,28 @@ a:hover {
 .team-members {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Adjust spacing between team members */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .team-member {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text inside each member */
+    align-items: center;
+    text-align: center;
     max-width: 200px;
 }
 
 .team-member img {
     border-radius: 50%;
-    width: 100px; /* Adjust width of images */
-    height: 100px; /* Adjust height of images */
-    object-fit: cover; /* Ensure image covers the area without stretching */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .team-member h3 {
     font-size: 18px;
-    margin: 10px 0 2px; /* Adjust spacing */
+    margin: 10px 0 2px;
 }
 
 .team-member p {
@@ -363,11 +362,11 @@ a:hover {
 .linkedin-link img {
     width: 35px;
     height: 100%;
-    margin-top: 0px; /* Jarak antara posisi dan ikon LinkedIn */
+    margin-top: 0px;
 }
 
 .linkedin-link img:hover {
-    opacity: 0.7; /* Efek hover untuk ikon LinkedIn */
+    opacity: 0.7;
 }
 
 .footer {
