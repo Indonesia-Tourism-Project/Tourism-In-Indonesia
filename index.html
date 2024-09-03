@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Data Base Script Basic -->
+   
 </head>
 <body>
-    <div class="opening">
+    <div class="opening"> 
         <header id="header" class="header">
             <nav>
                 <ul>
@@ -73,6 +76,12 @@
                 <p class="jumlah-description">City</p>
             </div>
         </div>
+      
+        <script>
+            $(document).ready(function() {
+                $('#tabel-data').DataTable();
+            });
+        </script>
         <div class="facts-content">
             <a href="https://docs.google.com/spreadsheets/d/13draK6MeM6ti0cFxU3hN-8eiUnF-NKlXsM_9Lovh4dI/edit?gid=74474702#gid=74474702" target="_blank">
                 <div class="datasets">
@@ -89,18 +98,21 @@
             <div class="reports">
                 <div class="reports-card">
                     <div class="report-chart">
-                        <canvas id="PropertyTypeSales" width="900" height="600" style="padding-bottom: 50px; padding-top: 50px;"></canvas>
-                    </div>
-                </div>
-                <div class="reports-card">
-                    <div class="report-chart">
                         <canvas id="MostOrdersbyYearBuilt" style="padding-bottom: 50px;"></canvas>
                     </div>
-                </div>
-                <div class="reports-card">
-                    <div class="report-chart">
-                        <canvas id="Destination"></canvas>
+                <div class="chart-only">
+                    <div class="reports-card">
+                        <div class="report-chart">
+                            <canvas id="PropertyTypeSales" width="900" height="600" style="padding-bottom: 50px; padding-top: 50px;"></canvas>
+                        </div>
                     </div>
+                    <div class="reports-card">
+                        <div class="report-chart">
+                            <canvas id="Destination"></canvas>
+                        </div>
+                    </div>
+
+                </div>
                 </div>
             </div>
         </div>
